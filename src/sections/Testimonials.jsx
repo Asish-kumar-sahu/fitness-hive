@@ -20,7 +20,7 @@ export default function Testimonials() {
   const reviews = [
     {
       name: "Preetham Madyastha",
-      image: "/preetham.png", // ⚠️ lowercase important
+      image: "/Preetham.png", // ⚠️ lowercase important
       review:
         "Gym is an amazing place to train. Always clean, well-equipped, and has a great motivating atmosphere. Coach Nayan is professional and supportive.",
     },
