@@ -6,7 +6,6 @@ export default function Testimonials() {
   const [active, setActive] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  // 🔥 detect mobile
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -21,7 +20,7 @@ export default function Testimonials() {
   const reviews = [
     {
       name: "Preetham Madyastha",
-      image: "/Preetham.png",
+      image: "/preetham.png", // ⚠️ lowercase important
       review:
         "Gym is an amazing place to train. Always clean, well-equipped, and has a great motivating atmosphere. Coach Nayan is professional and supportive.",
     },
@@ -89,19 +88,18 @@ export default function Testimonials() {
           gap: "60px",
         }}
       >
-        {/* 🔥 LEFT SIDE */}
+        {/* LEFT */}
         <div
           style={{
             position: "relative",
             width: isMobile ? "100%" : "300px",
           }}
         >
-          {/* LINE (desktop only) */}
           {!isMobile && (
             <div
               style={{
                 position: "absolute",
-                left: "30px",
+                left: "35px",
                 top: 0,
                 bottom: 0,
                 width: "2px",
@@ -116,19 +114,20 @@ export default function Testimonials() {
               onClick={() => setActive(index)}
               style={{
                 display: "flex",
-                alignItems: "flex-start",
+                alignItems: "center",
                 marginBottom: "25px",
                 cursor: "pointer",
                 gap: "15px",
               }}
             >
-              {/* IMAGE */}
+              {/* ✅ FIXED IMAGE */}
               <div
                 style={{
-                  minWidth: "60px",
-                  height: "60px",
+                  width: "65px",
+                  height: "65px",
                   borderRadius: "50%",
                   overflow: "hidden",
+                  flexShrink: 0,
                   border:
                     active === index
                       ? "2px solid #facc15"
@@ -146,14 +145,13 @@ export default function Testimonials() {
                   style={{
                     width: "100%",
                     height: "100%",
-                    objectFit: "cover",
+                    objectFit: "cover", // 🔥 MAIN FIX
                   }}
                 />
               </div>
 
-              {/* TEXT SIDE */}
+              {/* TEXT */}
               <div style={{ flex: 1 }}>
-                {/* NAME */}
                 <div
                   style={{
                     color: active === index ? "#facc15" : "#fff",
@@ -163,7 +161,6 @@ export default function Testimonials() {
                   {item.name}
                 </div>
 
-                {/* ⭐ RATING */}
                 <div
                   style={{
                     color: "#facc15",
@@ -174,7 +171,6 @@ export default function Testimonials() {
                   ★★★★★
                 </div>
 
-                {/* 🔥 MOBILE ONLY REVIEW PREVIEW */}
                 {isMobile && (
                   <div
                     style={{
@@ -191,7 +187,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* 🔥 RIGHT SIDE (HIDE ON MOBILE) */}
+        {/* RIGHT (DESKTOP ONLY) */}
         {!isMobile && (
           <div style={{ flex: 1 }}>
             <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>
