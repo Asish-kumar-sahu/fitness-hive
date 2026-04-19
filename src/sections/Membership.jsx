@@ -21,7 +21,7 @@ export default function Membership() {
   const plans = [
     {
       title: "3 Months",
-      price: "₹3999",
+      price: "₹1199",
       features: [
         "Full Gym Access",
         "Basic Trainer Support",
@@ -31,7 +31,7 @@ export default function Membership() {
     },
     {
       title: "6 Months",
-      price: "₹5999",
+      price: "₹2999",
       features: [
         "Full Gym Access",
         "Trainer Guidance",
@@ -41,8 +41,8 @@ export default function Membership() {
     },
     {
       title: "12 Months",
-      price: "₹7999",
-      oldPrice: "₹15000",
+      price: "₹3999",
+      oldPrice: "₹2000",
       highlight: true,
       tag: "Best Value + 3 Months Free",
       features: [
