@@ -102,7 +102,7 @@ export default function HeroSection() {
       >
         <h1 className={animate ? "fadeUp" : ""}>
           Transform Your Body <br />
-          <span style={{ color: "#facc15" }}>make the payment of your website</span>
+          <span style={{ color: "#facc15" }}>FITNESS HIVE </span>
         </h1>
 
         <p className={animate ? "fadeUp delay1" : ""}>
